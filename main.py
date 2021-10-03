@@ -26,7 +26,7 @@ while True:
         pass
     elif(opcion == "3" or opcion == "Examen final"):
         pass
-    elif(opcin == "4" or opcion == "Salir del programa"):
+    elif(opcion == "4" or opcion == "Salir del programa"):
         pass
     else:
         print("Hasta la proxima")
