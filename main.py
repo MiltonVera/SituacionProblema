@@ -33,10 +33,9 @@ while True:
     elif(opcion == "3" or opcion == "Examen final"):
         pass
     elif(opcion == "4" or opcion == "Salir del programa"):
-        pass
-    else:
         print("Hasta la proxima")
         exit()
+        
 
 
 
