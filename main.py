@@ -1,4 +1,5 @@
 from os import system
+
 import time
 print("Bienvenido a tu mejor amigo para sacar la mejor calificacion de PISA")
 print()
