@@ -26,9 +26,10 @@ while True:
     print("4.-Salir del programa")
     opcion = input()
     if(opcion == "1" or opcion == "Estudio general"):
-        eg.main();
+        eg.main()
         pass
     elif(opcion == "2" or opcion == "Estudio especifico"):
+        ee.main()
         pass
     elif(opcion == "3" or opcion == "Examen final"):
         pass
