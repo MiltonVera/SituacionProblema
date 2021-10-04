@@ -4,7 +4,6 @@ import time
 import estudio_general as eg
 import estudio_especifico as ee
 import generador_de_problemas as gp
-import inicio_de_sesion as login 
 
 print("Bienvenido a tu mejor amigo para sacar la mejor calificacion de PISA")
 print()

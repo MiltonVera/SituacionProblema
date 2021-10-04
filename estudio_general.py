@@ -1,4 +1,6 @@
 from os import system
+
+import explicador as ex
 import generador_de_problemas as gp
 import time
 def main():
@@ -12,15 +14,15 @@ def main():
     time.sleep(4)
     system("cls")
     print("Empezaremos con Geometría")
-    #Aqui se pondra la explicación de geometría
+    ex.geometria()#Aqui se pondra la explicación de geometría
     gp.geometria()#Se le da al usuario un problema de geometria
     print("El siguiente tema a tratar es Funciones y graficas")
-    #Aqui se pondra la explicación de funciones y graficas
+    ex.funciones_y_graficas()#Aqui se pondra la explicación de funciones y graficas
     gp.funciones_y_graficas#Aqui se le da un problema de practica a resolver para el usuario
     print("El siguiente tema es estadistica descriptiva")
-    #Explicación del tema
+    ex.estadistica_descriptiva()#Explicación del tema
     gp.estadistica_descriptiva()#Problema a resolver
     print("El ultimo tema a tratar es el de combinatoria y probabilidad")
-    #Explicación del tema
+    ex.combinatoria_probabilidad()#Explicación del tema
     gp.combinatoria_probabilidad()#Problema a resolver por parte del usuario
 
