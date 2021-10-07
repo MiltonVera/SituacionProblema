@@ -1,6 +1,8 @@
-
+def aritmetica():
+    pass
+def algebra():
+    pass
 def geometria():
-    
     pass
 def funciones_y_graficas():
     pass

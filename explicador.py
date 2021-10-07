@@ -1,3 +1,9 @@
+
+def aritmetica():
+    
+    pass
+def algebra():
+    pass
 def geometria():
     
     pass

@@ -7,6 +7,8 @@ def main():
     system("cls")
     print("A continuacion veras cuales son los temas a ver")
     print()
+    print("-Aritmetica")
+    print("-Algebra")
     print("-Geometria")
     print("-Funciones y Graficas")
     print("-Estadistica descriptiva")
