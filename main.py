@@ -2,13 +2,15 @@ from os import system
 import time
 from PIL import Image
 
+import utilidades as ut
 import estudio_general as eg
 import estudio_especifico as ee
 import generador_de_problemas as gp
 
 #im = Image.open("tec.jpg")
 #im.show()
-print("Bienvenido a tu mejor amigo para sacar la mejor calificacion de PISA")
+
+print(ut.formato("Bienvenido a tu mejor amigo para sacar la mejor calificacion de PISA","BLACK","WHITE"))
 print()
 print()
 time.sleep(1)
