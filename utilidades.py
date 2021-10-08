@@ -29,8 +29,25 @@ def tabla(c,v):
             tabla.append([v[i],v[i+1]])
     except IndexError:
         print("Tienes que relacionar un valor con otro")
+    '''Uso de la funcion tabla
+    Para estar esta funcion debes de proporcionar en el primer argumento los titulos de la tabla
+    y en el segundo argumento los datos que deben de ir en ella
+    
+    Un ejemplo del uso de este funcion es
+    tabla(["x","y"],[1,2,3,4])
+    
+    El el primer argumento son los titulos de la tabla
+    y vemos como los datos de la lista estan relacionados. El 1 con el 2, el 3 con el 4, etc
+
+    ╒═════╤═════╕
+    │   x │   y │
+    ╞═════╪═════╡
+    │   1 │   2 │
+    ├─────┼─────┤
+    │   3 │   4 │
+    ╘═════╧═════╛
+    '''
     return print(tabulate(tabla,headers="firstrow",tablefmt="fancy_grid"))
-print(tabla(["x","y"],[1,2,3,4,5]))
 
 
 

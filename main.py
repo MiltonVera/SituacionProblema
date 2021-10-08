@@ -24,11 +24,7 @@ kk = input("Presiona enter para empezar")
 time.sleep(2)
 system("cls")
 while True:
-    print("Selecciona un opción para comenzar")
-    print("1.-Estudio general")
-    print("2.-Estudio especifico")
-    print("3.-Examen Final")
-    print("4.-Salir del programa")
+    print(ut.tabla(["OPCION","NUMERO"],["Estudio General",1,"Estudio especifico",2,"Examen Final",3,"salir del programa",4]))
     opcion = input()
     if(opcion == "1" or opcion == "Estudio general"):
         eg.main()
