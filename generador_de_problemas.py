@@ -11,8 +11,7 @@ def comprobar(respuesta):
 
 
 def aritmetica():
-    #eleccion = random.choice([1,2,3])
-    eleccion =3
+    eleccion = random.choice([1,2,3])
     if eleccion == 1:
         largo = random.randrange(50,100,1)
         ancho = random.randrange(20,70,1)
