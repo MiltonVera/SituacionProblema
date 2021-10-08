@@ -15,12 +15,19 @@ def main():
     print("-Combinatoria y Probabilidad")
     time.sleep(4)
     system("cls")
-    print("Empezaremos con Geometría")
+
+    print("El primer tema a tratar es Aritmetica")
+    ex.aritmetica()#Aqui se pondra la explicación de geometría
+    gp.aritmetica()#Se le da al usuario un problema de geometria
+    print("El siguiente tema a tratar es Geometría")
+    ex.algebra()#Aqui se pondra la explicación de geometría
+    gp.algebra()#Se le da al usuario un problema de geometria
+    print("El siguiente tema a tratar es Geometría")
     ex.geometria()#Aqui se pondra la explicación de geometría
     gp.geometria()#Se le da al usuario un problema de geometria
     print("El siguiente tema a tratar es Funciones y graficas")
     ex.funciones_y_graficas()#Aqui se pondra la explicación de funciones y graficas
-    gp.funciones_y_graficas#Aqui se le da un problema de practica a resolver para el usuario
+    gp.funciones_y_graficas()#Aqui se le da un problema de practica a resolver para el usuario
     print("El siguiente tema es estadistica descriptiva")
     ex.estadistica_descriptiva()#Explicación del tema
     gp.estadistica_descriptiva()#Problema a resolver

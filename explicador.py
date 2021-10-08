@@ -1,7 +1,9 @@
 import utilidades as ut
+import time
 def aritmetica():
-    print(ut.formato("Aritmética","RED"))
-    print(ut.formato("La aritmética estudia los números y las operaciones básicas que se pueden llevar a cabo entre ellos. Las operaciones matemáticas más comunes son la suma, la resta, la multiplicación y la división. \nLas operaciones aritméticas se dividen en dos grupos, las directas y las indirectas. \nLas operaciones directas son la suma o adición, la cual se representa con el signo +, la multiplicación, la cual se representa con los signos x o * y la potenciación, la cual consiste en multiplicar un número por sí mismo n cantidad de veces. \nLas operaciones indirectas son la resta o sustracción, la cual se representa con el signo -; la división, la cual representa la división entre un dividendo y un división; la radicación, la cual es el proceso inverso a la potenciación y la logaritmación, la cual es de igual manera una operación inversa a la potenciación.","BLACK","WHITE"))
+    print(ut.formato("Aritmética","RED",animacion=True))
+    time.sleep(1)
+    print(ut.formato("La aritmética estudia los números y las operaciones básicas que se pueden llevar a cabo entre ellos. \nLas operaciones matemáticas más comunes son la suma, la resta, la multiplicación y la división. \nLas operaciones aritméticas se dividen en dos grupos, las directas y las indirectas. \nLas operaciones directas son la suma o adición, la cual se representa con el signo +\nLa multiplicación, la cual se representa con los signos x o * .\nLa potenciación, la cual consiste en multiplicar un número por sí mismo n cantidad de veces. \nLas operaciones indirectas son la resta o sustracción, la cual se representa con el signo - \nLa división, la cual representa la división entre un dividendo y un división \nLa radicación, la cual es el proceso inverso a la potenciación \nLa logaritmación, la cual es de igual manera una operación inversa a la potenciación.","BLACK","WHITE"))
     pass
 def algebra():
     print(ut.formato("Álgebra","RED"))

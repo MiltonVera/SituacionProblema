@@ -3,6 +3,7 @@ import time
 
 import explicador as ex
 import generador_de_problemas as gp
+import utilidades as ut
 
 def main():
     system("cls")
@@ -22,15 +23,19 @@ def main():
             ex.aritmetica()
             continuar = None
             while(continuar != "N"):
+                ut.mecanografiar("A continuacion un problema")
+                time.sleep(2)
                 gp.aritmetica()
                 continuar = input("¿Quieres otro problema?S/N").upper()
         else:
             continuar = None
             while(continuar != "N"):
+                ut.mecanografiar("A continuacion un problema")
+                time.sleep(2)
                 gp.aritmetica()
                 continuar = input("¿Quieres otro problema?S/N").upper()
         pass
-    if(eleccion == 2):
+    elif(eleccion == 2):
         print("Has elegido estudiar algebra")
         time.sleep(1)
         eleccion = input("¿Deseas ver de nuevo la explicación?S/N")
@@ -38,15 +43,18 @@ def main():
             ex.algebra()
             continuar = None
             while(continuar != "N"):
+                ut.mecanografiar("A continuacion un problema")
+                time.sleep(2)
                 gp.algebra()
                 continuar = input("¿Quieres otro problema?S/N").upper()
         else:
             continuar = None
             while(continuar != "N"):
+                ut.mecanografiar("A continuacion un problema")
+                time.sleep(2)
                 gp.algebra()
                 continuar = input("¿Quieres otro problema?S/N").upper()
         pass
-
     elif(eleccion == 3):
         print("Has elegido estudiar geometria")
         time.sleep(1)
@@ -55,11 +63,15 @@ def main():
             ex.geometria()
             continuar = None
             while(continuar != "N"):
+                ut.mecanografiar("A continuacion un problema")
+                time.sleep(2)
                 gp.geometria()
                 continuar = input("¿Quieres otro problema?S/N").upper()
         else:
             continuar = None
             while(continuar != "N"):
+                ut.mecanografiar("A continuacion un problema")
+                time.sleep(2)
                 gp.geometria()
                 continuar = input("¿Quieres otro problema?S/N").upper()
         pass
@@ -71,11 +83,15 @@ def main():
             ex.funciones_y_graficas()
             continuar = None
             while(continuar != "N"):
+                ut.mecanografiar("A continuacion un problema")
+                time.sleep(2)
                 gp.funciones_y_graficas()
                 continuar = input("¿Quieres otro problema?S/N").upper()
         else:
             continuar = None
             while(continuar != "N"):
+                ut.mecanografiar("A continuacion un problema")
+                time.sleep(2)
                 gp.funciones_y_graficas()
                 continuar = input("¿Quieres otro problema?S/N").upper()
         pass
@@ -87,11 +103,15 @@ def main():
             ex.estadistica_descriptiva()
             continuar = None
             while(continuar != "N"):
+                ut.mecanografiar("A continuacion un problema")
+                time.sleep(2)
                 gp.estadistica_descriptiva()
                 continuar = input("¿Quieres otro problema?S/N")
         else:
             continuar = None
             while(continuar != "N"):
+                ut.mecanografiar("A continuacion un problema")
+                time.sleep(2)
                 gp.estadistica_descriptiva()
                 continuar = input("¿Quieres otro problema?S/N")
         pass
@@ -103,11 +123,15 @@ def main():
             ex.combinatoria_probabilidad()
             continuar = None
             while(continuar != "N"):
+                ut.mecanografiar("A continuacion un problema")
+                time.sleep(2)
                 gp.combinatoria_probabilidad()
                 continuar = input("¿Quieres otro problema?S/N")
         else:
             continuar = None
             while(continuar != "N"):
+                ut.mecanografiar("A continuacion un problema")
+                time.sleep(2)
                 gp.combinatoria_probabilidad()
                 continuar = input("¿Quieres otro problema?S/N")
         pass

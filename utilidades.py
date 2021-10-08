@@ -1,6 +1,7 @@
 from colorama import*
+from time import sleep
 from tabulate import tabulate
-def formato(texto,color="RESET",fondo="RESET"):
+def formato(texto,color="RESET",fondo="RESET",animacion=False):
     """Colores disponibles de usar
     BLACK
     RED
@@ -20,15 +21,12 @@ def formato(texto,color="RESET",fondo="RESET"):
     formato("Tu texto","BLUE","RED") Este solo le da un color azul al texto y un fondo rojo
     """
     init()
-    return (eval(f"Fore.{color}") if color != None else "")+(eval(f"Back.{fondo}") if color != None else "")+Style.BRIGHT +texto+Fore.RESET+Back.RESET+Style.RESET_ALL
+    if(animacion):
+        return mecanografiar((eval(f"Fore.{color}") if color != None else "")+(eval(f"Back.{fondo}") if color != None else "")+Style.BRIGHT +texto+Fore.RESET+Back.RESET+Style.RESET_ALL)
+    else:
+        return (eval(f"Fore.{color}") if color != None else "")+(eval(f"Back.{fondo}") if color != None else "")+Style.BRIGHT +texto+Fore.RESET+Back.RESET+Style.RESET_ALL
 
 def tabla(c,v):
-    tabla = [c]
-    try:
-        for i in range(0,len(v),2):
-            tabla.append([v[i],v[i+1]])
-    except IndexError:
-        print("Tienes que relacionar un valor con otro")
     '''Uso de la funcion tabla
     Para estar esta funcion debes de proporcionar en el primer argumento los titulos de la tabla
     y en el segundo argumento los datos que deben de ir en ella
@@ -47,7 +45,20 @@ def tabla(c,v):
     │   3 │   4 │
     ╘═════╧═════╛
     '''
+    tabla = [c]
+    try:
+        for i in range(0,len(v),2):
+            tabla.append([v[i],v[i+1]])
+    except IndexError:
+        print("Tienes que relacionar un valor con otro")
+    
     return print(tabulate(tabla,headers="firstrow",tablefmt="fancy_grid"))
+
+def mecanografiar(texto):
+    for palabras in texto.split():
+        sleep(0.15)
+        print(palabras, end=' ', flush=True)
+    print()
 
 
 
