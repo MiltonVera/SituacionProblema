@@ -125,12 +125,21 @@ def funciones_y_graficas():
 def estadistica_descriptiva():
     eleccion = random.choice([1,2])
     if eleccion == 1:
-        examen_5 = random.randrange()
-        
-
+        examen_5 = random.randrange(70,100,10)
+        media = ((60*4)+examen_5)/5
+        respuesta = round(media,2)
+        print(f"En el colegio de Mariana, los exámenes se puntúan del 0 al 100 y todos tienen el mismo peso en la calificación final. Si en sus primeros 4 exámenes la media de calificación de Mariana es de 60 puntos y en su 5 examen obtiene un {examen_5}.")
+        print("¿Cuál será la media de calificaciones de Mariana después de los 5 exámenes? (Redondea a 2 decimales)")
+        comprobar(respuesta)
         pass
-    elif eleccion == 2:
 
+    elif eleccion == 2:
+        estatura_nueva = random.randrange(110,150,10)
+        media = ((130*24) + estatura_nueva) / 25
+        respuesta = round(media,2)
+        print(f"En una clase hay 25 chicas. En su clase de educación física les piden calcular su estatura media pero ese día faltó una chica a la clase. La estatura media de las 24 chicas es de 130 cm. Al siguiente dia miden a la chica que faltó y su estatura es de {estatura_nueva} cm. ")
+        print("¿Cuál es la estatura media de la clase? (Redondea a 2 decimales")
+        comprobar(respuesta)
         pass
 
 def combinatoria_probabilidad():
