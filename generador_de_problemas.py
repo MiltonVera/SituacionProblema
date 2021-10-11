@@ -109,7 +109,8 @@ def geometria():
         personas_por_min = 24
         min = random.randrange(20,40,2)
         respuesta = personas_por_min * min
-        print("Una puerta giratoria consta de tres hojas que giran dentro de un espacio circular. El diámetro del círculo es de 2 metros y las 3 hojas de la puerta dividen el espacio en tres sectores iguales.")
+        print("""Una puerta giratoria consta de tres hojas que giran dentro de un espacio circular. 
+        El diámetro del círculo es de 2 metros y las 3 hojas de la puerta dividen el espacio en tres sectores iguales.""")
         print(f"Si la puerta da 4 vueltas por minuto y en cada sector hay espacio para 2 personas, ¿Cuál es el número máximo de personas que pueden entrar en el edificio por la puerta en {min} minutos?")
         comprobar(respuesta)
         pass
@@ -129,7 +130,8 @@ def estadistica_descriptiva():
         examen_5 = random.randrange(70,100,10)
         media = ((60*4)+examen_5)/5
         respuesta = round(media,2)
-        print(f"En el colegio de Mariana, los exámenes se puntúan del 0 al 100 y todos tienen el mismo peso en la calificación final. Si en sus primeros 4 exámenes la media de calificación de Mariana es de 60 puntos y en su 5 examen obtiene un {examen_5}.")
+        print(f"""En el colegio de Mariana, los exámenes se puntúan del 0 al 100 y todos tienen el mismo peso en la calificación final. 
+        Si en sus primeros 4 exámenes la media de calificación de Mariana es de 60 puntos y en su 5 examen obtiene un {examen_5}.""")
         print("¿Cuál será la media de calificaciones de Mariana después de los 5 exámenes? (Redondea a 2 decimales)")
         comprobar(respuesta)
         pass
@@ -138,10 +140,13 @@ def estadistica_descriptiva():
         estatura_nueva = random.randrange(110,150,10)
         media = ((130*24) + estatura_nueva) / 25
         respuesta = round(media,2)
-        print(f"En una clase hay 25 chicas. En su clase de educación física les piden calcular su estatura media pero ese día faltó una chica a la clase. La estatura media de las 24 chicas es de 130 cm. Al siguiente dia miden a la chica que faltó y su estatura es de {estatura_nueva} cm. ")
+        print(f"""En una clase hay 25 chicas. En su clase de educación física les piden calcular su estatura media pero ese día faltó una chica a la clase. La estatura media de las 24 chicas es de 130 cm. 
+        Al siguiente dia miden a la chica que faltó y su estatura es de {estatura_nueva} cm. """)
         print("¿Cuál es la estatura media de la clase? (Redondea a 2 decimales")
         comprobar(respuesta)
         pass
+
+
 
 def combinatoria_probabilidad():
     eleccion = random.choice([1,2,3])
