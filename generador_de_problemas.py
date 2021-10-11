@@ -67,7 +67,8 @@ def algebra():
         periodicos_extra = num_periodicos - 240
         resp = round(((240*0.2) + (periodicos_extra*0.4)),2)
         respuesta = resp
-        print("En Alemania, una empresa de periódicos quiere contratar vendedores. En sus anuncios, muestran como se le pagará a sus vendedores, lo que dicen los anuncios es lo siguiente: “Pagamos: 0,20 Euros por periódico para los primeros 240 ejemplares que vendas en una semana, más 0,40 Euros por cada periódico adicional vendido.”")
+        print("""En Alemania, una empresa de periódicos quiere contratar vendedores. En sus anuncios, muestran como se le pagará a sus vendedores, lo que dicen los anuncios es lo siguiente: 
+        “Pagamos: 0,20 Euros por periódico para los primeros 240 ejemplares que vendas en una semana, más 0,40 Euros por cada periódico adicional vendido.”""")
         print(f"Si Juanito vendió {num_periodicos} ejemplares la semana pasada, ¿Cuánto dinero le tienen que pagar a Juanito? (redondea tu respuesta a 2 decimales)")
         comprobar(respuesta)
         pass
@@ -77,7 +78,8 @@ def algebra():
         constante = random.randrange(100,150,10)
         resp = pasos_min / constante
         respuesta  = round(resp,2)
-        print(f"Pedro caminó por un camino enlodado y fue dejando huellas por todo el camino, la longitud del paso P es la  es la distancia entre los extremos posteriores de dos huellas consecutivas. En el caso de los hombres, la fórmula n/p = {constante}, da una relación aproximada entre n (número de pasos por minuto) y P (longitud de los pasos en metros).")
+        print(f"""Pedro caminó por un camino enlodado y fue dejando huellas por todo el camino, la longitud del paso P es la  es la distancia entre los extremos posteriores de dos huellas consecutivas. 
+        En el caso de los hombres, la fórmula n/p = {constante}, da una relación aproximada entre n (número de pasos por minuto) y P (longitud de los pasos en metros).""")
         print(f"Si Pedro da {pasos_min} pasos por minuto ¿Cuál es la longitud de sus pasos? Aplique la fórmula y redondee a 2 decimales.")
         comprobar(respuesta)
         pass
@@ -111,7 +113,8 @@ def geometria():
         respuesta = personas_por_min * min
         print("""Una puerta giratoria consta de tres hojas que giran dentro de un espacio circular. 
         El diámetro del círculo es de 2 metros y las 3 hojas de la puerta dividen el espacio en tres sectores iguales.""")
-        print(f"Si la puerta da 4 vueltas por minuto y en cada sector hay espacio para 2 personas, ¿Cuál es el número máximo de personas que pueden entrar en el edificio por la puerta en {min} minutos?")
+        print(f"""Si la puerta da 4 vueltas por minuto y en cada sector hay espacio para 2 personas, 
+        ¿Cuál es el número máximo de personas que pueden entrar en el edificio por la puerta en {min} minutos?""")
         comprobar(respuesta)
         pass
 
