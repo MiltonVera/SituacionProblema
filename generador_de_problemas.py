@@ -74,9 +74,10 @@ def algebra():
 
     elif eleccion == 3:
         pasos_min = random.randrange(70,100,10)
-        resp = pasos_min / 140
+        constante = random.randrange(100,150,10)
+        resp = pasos_min / constante
         respuesta  = round(resp,2)
-        print("Pedro caminó por un camino enlodado y fue dejando huellas por todo el camino, la longitud del paso P es la  es la distancia entre los extremos posteriores de dos huellas consecutivas. En el caso de los hombres, la fórmula n/p = 140, da una relación aproximada entre n (número de pasos por minuto) y P (longitud de los pasos en metros).")
+        print(f"Pedro caminó por un camino enlodado y fue dejando huellas por todo el camino, la longitud del paso P es la  es la distancia entre los extremos posteriores de dos huellas consecutivas. En el caso de los hombres, la fórmula n/p = {constante}, da una relación aproximada entre n (número de pasos por minuto) y P (longitud de los pasos en metros).")
         print(f"Si Pedro da {pasos_min} pasos por minuto ¿Cuál es la longitud de sus pasos? Aplique la fórmula y redondee a 2 decimales.")
         comprobar(respuesta)
         pass
@@ -172,11 +173,5 @@ def combinatoria_probabilidad():
         time.sleep(1)
         pass
     elif eleccion == 3:
-        cantidad = random.randrange(100,700,5)
-        respuesta = cantidad*0.6
-        print("""La receta para preparar 100ml de aliño es""")
-        ut.tabla(["Ingredientes","Cantidad"],["Aceite para ensalada","60ml","Vinagre","30ml","Salsa de soja","10ml"])
-        print(f"""¿Cuantos mililitros de aceite para ensalda necesita para preparar {cantidad}ml de este aliño?""")
-        comprobar(respuesta)
 
-    pass
+        pass
