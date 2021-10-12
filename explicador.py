@@ -3,17 +3,41 @@ import time
 def aritmetica():
     ut.formato("Aritmética","RED",animacion=True)
     time.sleep(1)
-    ut.formato("La aritmética estudia los números y las operaciones básicas que se pueden llevar a cabo entre ellos. \nLas operaciones matemáticas más comunes son la suma, la resta, la multiplicación y la división. \nLas operaciones aritméticas se dividen en dos grupos, las directas y las indirectas. \nLas operaciones directas son la suma o adición, la cual se representa con el signo +\nLa multiplicación, la cual se representa con los signos x o * .\nLa potenciación, la cual consiste en multiplicar un número por sí mismo n cantidad de veces. \nLas operaciones indirectas son la resta o sustracción, la cual se representa con el signo - \nLa división, la cual representa la división entre un dividendo y un división \nLa radicación, la cual es el proceso inverso a la potenciación \nLa logaritmación, la cual es de igual manera una operación inversa a la potenciación.","BLACK","WHITE")
+    ut.formato("""La aritmética estudia los números y las operaciones básicas que se pueden llevar a cabo entre ellos. 
+                  Las operaciones matemáticas más comunes son la suma, la resta, la multiplicación y la división.
+                  Las operaciones aritméticas se dividen en dos grupos, las directas y las indirectas.
+                  Las operaciones directas son la suma o adición, la cual se representa con el signo +
+                  La multiplicación, la cual se representa con los signos x o * .
+                  La potenciación, la cual consiste en multiplicar un número por sí mismo n cantidad de veces.
+                  Las operaciones indirectas son la resta o sustracción, la cual se representa con el signo -
+                  La división, la cual representa la división entre un dividendo y un división
+                  La radicación, la cual es el proceso inverso a la potenciación
+                  La logaritmación, la cual es de igual manera una operación inversa a la potenciación.""","BLACK","WHITE")
     pass
 def algebra():
     ut.formato("Álgebra","RED",animacion=True)
     time.sleep(1)
-    ut.formato("El álgebra es una rama de las matemáticas que utiliza no solo números y signos, sino también letras para resolver operaciones. En otras palabras, el algebra busca hallar el valor numérico de variables desconocidas o incógnitas. \nAlgunos de los conceptos principales del álgebra son: \n-Expresión algebraica: expresión de números y letras sometidos a operaciones matemáticas. Las principales expresiones algebraicas son los monomios (expresiones con un sumando) y polinomios (expresiones con 2 o más sumandos) \n-Término: combinación de números y símbolos que representan un número \n-Factor: cada componente de un término \n-Coeficiente: el factor vinculado con algún monomio o polinomio \n-Símbolos: representan cantidades \n-Grado: Suma de los exponentes de las variables \n-Signos de agrupación: agrupan términos o expresiones algebraicas, por lo general se utilizan los paréntesis, corchetes y llaves \n-Variable: un símbolo (por lo general letras del alfabeto) que representa cualquier número o valor de un conjunto dado y que puede cambiar.","BLACK","WHITE")
+    ut.formato("""El álgebra es una rama de las matemáticas que utiliza no solo números y signos, sino también letras para resolver operaciones. 
+                  En otras palabras, el algebra busca hallar el valor numérico de variables desconocidas o incógnitas.
+                  Algunos de los conceptos principales del álgebra son:
+                    -Expresión algebraica: expresión de números y letras sometidos a operaciones matemáticas. 
+                        Las principales expresiones algebraicas son los monomios (expresiones con un sumando) y 
+                        polinomios (expresiones con 2 o más sumandos)
+                    -Término: combinación de números y símbolos que representan un número
+                    -Factor: cada componente de un término
+                    -Coeficiente: el factor vinculado con algún monomio o polinomio
+                    -Símbolos: representan cantidades
+                    -Grado: Suma de los exponentes de las variables
+                    -Signos de agrupación: agrupan términos o expresiones algebraicas,
+                        por lo general se utilizan los paréntesis, corchetes y llaves
+                    -Variable: un símbolo (por lo general letras del alfabeto) que 
+                        representa cualquier número o valor de un conjunto dado y que puede cambiar.""","BLACK","WHITE")
     pass
 def geometria():
     ut.formato("Geometría","RED",animacion=True)
     time.sleep(1)
-    ut.formato("La geometría elemental se divide en dos partes, geometría plana (estudia la figuras planas, que tienen únicamente dos dimensiones: largo y ancho) y geometría del espacio (estudia las propiedades de los cuerpos geométricos provistos de largo, ancho y altura o profundidad). \nAlgunos de los conceptos básicos de la geometría son los siguientes: \n-Punto: el objeto fundamental de la geometría, representa una sola posición y no tiene dimensiones \n-Recta: únicamente cuenta con longitud, es un conjunto infinito de puntos que se extienden en una dimensión en ambas direcciones \n-Semirrecta: una porción de una recta que cuenta con principio pero no con un fin \n-Segmento de recta: porción de una recta con principio y fin \n-Plano: una superficie en dos dimensiones, cuenta con ancho y largo \n-Polígonos: figuras planas cerradas que está formada por tres o más segmentos de recta que se unen en sus puntos extremos. Los polígonos reciben sus nombres por su cantidad de lados, los más comunes son el triángulo (3 lados), cuadrilátero (4 lados), pentágono (5 lados), entre otros \n-Vértices: puntos finales de un segmento \n-Lados: segmentos de recta que unen dos vértices consecutivos de un polígono \n-Diagonal: segmento de recta que une dos vértices no consecutivos \n-Círculos: figura plana que consiste en todos los puntos que están sobre una curva cerrada y de los puntos interiores de ella, en la cual cada punto sobre la curva tiene la misma distancia al centro del círculo \n-Radio de un círculo: la distancia entre el centro y un punto de la curva de un círculo \n-Diámetro: distancia entre dos puntos de la curva que pasa por el centro del círculo \n-La Circunferencia es la línea curva cerrada y plana cuyos puntos están a la misma distancia (radio) de un punto (centro)","BLACK","WHITE")
+    ut.formato("""La geometría elemental se divide en dos partes, geometría plana (estudia la figuras planas, que tienen únicamente dos dimensiones: largo y ancho)
+                  y geometría del espacio (estudia las propiedades de los cuerpos geométricos provistos de largo, ancho y altura o profundidad). \nAlgunos de los conceptos básicos de la geometría son los siguientes: \n-Punto: el objeto fundamental de la geometría, representa una sola posición y no tiene dimensiones \n-Recta: únicamente cuenta con longitud, es un conjunto infinito de puntos que se extienden en una dimensión en ambas direcciones \n-Semirrecta: una porción de una recta que cuenta con principio pero no con un fin \n-Segmento de recta: porción de una recta con principio y fin \n-Plano: una superficie en dos dimensiones, cuenta con ancho y largo \n-Polígonos: figuras planas cerradas que está formada por tres o más segmentos de recta que se unen en sus puntos extremos. Los polígonos reciben sus nombres por su cantidad de lados, los más comunes son el triángulo (3 lados), cuadrilátero (4 lados), pentágono (5 lados), entre otros \n-Vértices: puntos finales de un segmento \n-Lados: segmentos de recta que unen dos vértices consecutivos de un polígono \n-Diagonal: segmento de recta que une dos vértices no consecutivos \n-Círculos: figura plana que consiste en todos los puntos que están sobre una curva cerrada y de los puntos interiores de ella, en la cual cada punto sobre la curva tiene la misma distancia al centro del círculo \n-Radio de un círculo: la distancia entre el centro y un punto de la curva de un círculo \n-Diámetro: distancia entre dos puntos de la curva que pasa por el centro del círculo \n-La Circunferencia es la línea curva cerrada y plana cuyos puntos están a la misma distancia (radio) de un punto (centro)""","BLACK","WHITE")
     pass
 def funciones_y_graficas():
     ut.formato("Funciones y gráficas","RED",animacion=True)
