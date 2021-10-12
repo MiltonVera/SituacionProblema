@@ -6,11 +6,12 @@ import utilidades as ut
 import estudio_general as eg
 import estudio_especifico as ee
 import generador_de_problemas as gp
+import examen_final as ex
 
 #im = Image.open("tec.jpg")
 #im.show()
 
-print(ut.formato("Bienvenido a tu mejor amigo para sacar la mejor calificacion de PISA","BLACK","WHITE",True))
+ut.formato("Bienvenido a tu mejor amigo para sacar la mejor calificacion de PISA","BLACK","WHITE",True)
 
 #time.sleep(1)
 ut.mecanografiar("Tendras la oportunidad de aprender los temas que vienen en el examen de forma practica")
@@ -19,7 +20,8 @@ print("Al final de cada tema tendras la oportunidad de practicarlo y ver si lo p
 #time.sleep(2)
 print("Cuando te sientas listo/a para realizar el examen PISA te realizaremos un examen final para que puedas comprobar que ya estas preparado para el examen")
 #time.sleep(2)
-kk = input("Presiona enter para empezar")
+ut.mecanografiar("Presiona enter para empezar")
+kk = input()
 #time.sleep(2)
 system("cls")
 while True:
@@ -32,6 +34,8 @@ while True:
         ee.main()
         pass
     elif(opcion == "3" or opcion == "Examen final"):
+        ex.main()
+
         pass
     elif(opcion == "4" or opcion == "Salir del programa"):
         print("Hasta la proxima")
