@@ -55,15 +55,7 @@ def aritmetica():
 def algebra():
     eleccion = random.choice([1,2,3])
     if eleccion == 1:
-        mililitros_anil = random.randrange(110,250,10)
-        mililitros = mililitros_anil/100
-        resp = mililitros*60
-        respuesta = math.floor(resp)
-        print("Para preparar 100 ml de anil para una ensalada, se necesitan 60 ml de aceite para ensalada, 30 ml de vinagre y 10 ml de salsa de soja.")
-        print(f"¿Cuántos mililitros (ml) de aceite para ensalada necesitas para preparar {mililitros_anil} ml de aliño? (redondea tu respuesta a enteros)")
-        return comprobar(respuesta)
         pass
-
     elif eleccion == 2:
         num_periodicos = random.randrange(250,500,5)
         periodicos_extra = num_periodicos - 240
@@ -113,14 +105,14 @@ def geometria():
 
     elif eleccion == 3:
         personas_por_min = 24
-        min = random.randrange(20,40,2)
-        respuesta = personas_por_min * min
+        mints = random.randrange(20,40,2)
+        respuesta = personas_por_min * mints
         print("""Una puerta giratoria consta de tres hojas que giran dentro de un espacio circular. 
                  El diámetro del círculo es de 2 metros y las 3 hojas de la puerta dividen el espacio
                  en tres sectores iguales.""")
         print(f"""Si la puerta da 4 vueltas por minuto y en cada sector hay espacio para 2 personas, 
                   ¿Cuál es el número máximo de personas que pueden entrar en el edificio por la puerta
-                  en {min} minutos?""")
+                  en {mints} minutos?""")
         return comprobar(respuesta)
         pass
 
@@ -170,31 +162,8 @@ def combinatoria_probabilidad():
         time.sleep(1)
         pass
     elif eleccion == 2:
-        tablas_largas = random.randrange(1,50,1)
-        tablas_cortas = random.randrange(1,50,1)
-        ganchos_pequeños = random.randrange(100,400,1)
-        ganchos_grandes = random.randrange(5,30,1)
-        tornillos = random.randrange(350,700,5)
-        cantidades = [tablas_largas/4,tablas_cortas/6,ganchos_pequeños/12,ganchos_grandes/2,tornillos/14]
-        respuesta= math.floor(min(cantidades))
-        print("""Un carpintero necesita lo siguiente para hacer una estanteria
-                 4 tablas largas de madera
-                 6 tablas cortas de madera
-                 12 ganchos pequeños
-                 2 ganchos grandes
-                 14 tornillos""")
-        print(f"""El carpintero tiene en el almacén {tablas_largas} tablas largas de madera, {tablas_cortas} tablas cortas de 
-                  madera, {ganchos_pequeños} ganchos pequeños, {ganchos_grandes} ganchos grandes y {tornillos} tornillos. """)
-        print("Determina cuantas estanterias completas puede realizar el carpintero")
-        return comprobar(respuesta)
-        time.sleep(1)
         pass
-    elif eleccion == 3:
-        cantidad = random.randrange(100,700,5)
-        respuesta = cantidad*0.6
-        print("""La receta para preparar 100ml de aliño es""")
-        ut.tabla(["Ingredientes","Cantidad"],["Aceite para ensalada","60ml","Vinagre","30ml","Salsa de soja","10ml"])
-        print(f"""¿Cuantos mililitros de aceite para ensalda necesita para preparar {cantidad}ml de este aliño?""")
-        return comprobar(respuesta)
 
+    elif eleccion == 3:
+        pass
     pass
