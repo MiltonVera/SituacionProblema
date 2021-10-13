@@ -53,14 +53,12 @@ def aritmetica():
 def algebra():
     eleccion = random.choice([1,2,3])
     if eleccion == 1:
-        Dinero_gastado = random.randrange(60,150,10)
-        cuota_anual = random.randrange(20,50,10)
-        resp = (Dinero_gastado - cuota_anual)
-        respuesta = resp/5
-        print(f"""En la ciudad de México, hay una tienda que aquila DVD. En dicha tienda, la cuota de socio anual es de {cuota_anual} pesos.
-        El precio de alquiler de los DVD para los socios es inferior al precio para los no socios, el precio por DVD para un socio es de 5 pesos y para los no socios es de 10 pesos""")
-        print(f"""Pedrito fue a la tienda y gastó un total de {Dinero_gastado}, incluyendo la cuota de socio""")
-        print("""¿Cuántos DVD compro pedrito?""")
+        mililitros_anil = random.randrange(110,250,10)
+        mililitros = mililitros_anil/100
+        resp = mililitros*60
+        respuesta = math.floor(resp)
+        print("Para preparar 100 ml de anil para una ensalada, se necesitan 60 ml de aceite para ensalada, 30 ml de vinagre y 10 ml de salsa de soja.")
+        print(f"¿Cuántos mililitros (ml) de aceite para ensalada necesitas para preparar {mililitros_anil} ml de aliño? (redondea tu respuesta a enteros)")
         comprobar(respuesta)
         pass
 
@@ -69,19 +67,16 @@ def algebra():
         periodicos_extra = num_periodicos - 240
         resp = round(((240*0.2) + (periodicos_extra*0.4)),2)
         respuesta = resp
-        print("""En Alemania, una empresa de periódicos quiere contratar vendedores. En sus anuncios, muestran como se le pagará a sus vendedores, lo que dicen los anuncios es lo siguiente: 
-        “Pagamos: 0,20 Euros por periódico para los primeros 240 ejemplares que vendas en una semana, más 0,40 Euros por cada periódico adicional vendido.”""")
+        print("En Alemania, una empresa de periódicos quiere contratar vendedores. En sus anuncios, muestran como se le pagará a sus vendedores, lo que dicen los anuncios es lo siguiente: “Pagamos: 0,20 Euros por periódico para los primeros 240 ejemplares que vendas en una semana, más 0,40 Euros por cada periódico adicional vendido.”")
         print(f"Si Juanito vendió {num_periodicos} ejemplares la semana pasada, ¿Cuánto dinero le tienen que pagar a Juanito? (redondea tu respuesta a 2 decimales)")
         comprobar(respuesta)
         pass
 
     elif eleccion == 3:
         pasos_min = random.randrange(70,100,10)
-        constante = random.randrange(100,150,10)
-        resp = pasos_min / constante
+        resp = pasos_min / 140
         respuesta  = round(resp,2)
-        print(f"""Pedro caminó por un camino enlodado y fue dejando huellas por todo el camino, la longitud del paso P es la  es la distancia entre los extremos posteriores de dos huellas consecutivas. 
-        En el caso de los hombres, la fórmula n/p = {constante}, da una relación aproximada entre n (número de pasos por minuto) y P (longitud de los pasos en metros).""")
+        print("Pedro caminó por un camino enlodado y fue dejando huellas por todo el camino, la longitud del paso P es la  es la distancia entre los extremos posteriores de dos huellas consecutivas. En el caso de los hombres, la fórmula n/p = 140, da una relación aproximada entre n (número de pasos por minuto) y P (longitud de los pasos en metros).")
         print(f"Si Pedro da {pasos_min} pasos por minuto ¿Cuál es la longitud de sus pasos? Aplique la fórmula y redondee a 2 decimales.")
         comprobar(respuesta)
         pass
@@ -113,10 +108,8 @@ def geometria():
         personas_por_min = 24
         min = random.randrange(20,40,2)
         respuesta = personas_por_min * min
-        print("""Una puerta giratoria consta de tres hojas que giran dentro de un espacio circular. 
-        El diámetro del círculo es de 2 metros y las 3 hojas de la puerta dividen el espacio en tres sectores iguales.""")
-        print(f"""Si la puerta da 4 vueltas por minuto y en cada sector hay espacio para 2 personas, 
-        ¿Cuál es el número máximo de personas que pueden entrar en el edificio por la puerta en {min} minutos?""")
+        print("Una puerta giratoria consta de tres hojas que giran dentro de un espacio circular. El diámetro del círculo es de 2 metros y las 3 hojas de la puerta dividen el espacio en tres sectores iguales.")
+        print(f"Si la puerta da 4 vueltas por minuto y en cada sector hay espacio para 2 personas, ¿Cuál es el número máximo de personas que pueden entrar en el edificio por la puerta en {min} minutos?")
         comprobar(respuesta)
         pass
 
@@ -136,8 +129,8 @@ def estadistica_descriptiva():
         media = ((60*4)+examen_5)/5
         respuesta = round(media,2)
         print(f"""En el colegio de Mariana, los exámenes se puntúan del 0 al 100 y todos tienen el mismo peso en la calificación final. 
-        Si en sus primeros 4 exámenes la media de calificación de Mariana es de 60 puntos y en su 5 examen obtiene un {examen_5}.""")
-        print("¿Cuál será la media de calificaciones de Mariana después de los 5 exámenes? (Redondea a 2 decimales)")
+        Si en sus primeros 4 exámenes la media de calificación de Mariana es de 60 puntos y en su 5 examen obtiene un {examen_5}.")
+        print("¿Cuál será la media de calificaciones de Mariana después de los 5 exámenes? (Redondea a 2 decimales)""")
         comprobar(respuesta)
         pass
 
@@ -145,21 +138,20 @@ def estadistica_descriptiva():
         estatura_nueva = random.randrange(110,150,10)
         media = ((130*24) + estatura_nueva) / 25
         respuesta = round(media,2)
-        print(f"""En una clase hay 25 chicas. En su clase de educación física les piden calcular su estatura media pero ese día faltó una chica a la clase. La estatura media de las 24 chicas es de 130 cm. 
-        Al siguiente dia miden a la chica que faltó y su estatura es de {estatura_nueva} cm. """)
+        print(f"En una clase hay 25 chicas. En su clase de educación física les piden calcular su estatura media pero ese día faltó una chica a la clase. La estatura media de las 24 chicas es de 130 cm. Al siguiente dia miden a la chica que faltó y su estatura es de {estatura_nueva} cm. ")
         print("¿Cuál es la estatura media de la clase? (Redondea a 2 decimales")
         comprobar(respuesta)
         pass
 
-
-
 def combinatoria_probabilidad():
-    eleccion = random.choice([1,2,3])
+    #eleccion = random.choice([1,2,3])
+    eleccion = 1
     if eleccion == 1:
-        years = random.randrange(5,30,1)
-        #respuesta = largo*ancho
-        print(f"""Se emitió un documental sobre terremotos y la frecuencia con que éstos ocurren. El documental incluía un debate sobre la posibilidad de predecir los terremotos. /nUn geólogo afirmó: En los próximos {years} años, hay dos posibilidades por cada 3 de que ocurra un terremoto en la ciudad de Zed. """)
-        #comprobar(respuesta)
+        years = random.randrange(20,30,1)
+        respuesta = 1
+        print(f"""Se emitió un documental sobre terremotos y la frecuencia con que éstos ocurren. El documental \nincluía un debate sobre la posibilidad de predecir los terremotos. Un geólogo afirmó: En los próximos {years} años, \nhay dos posibilidades por cada 3 de que ocurra un terremoto en la ciudad de Zed. """)
+        ut.tabla(["Opcion", "Pregunta"],[1, "2/3 x 20 = 13.3, asi que entre 13 y 14 anos a \npartir de ahora habra un terremoto en la ciudad de Zed.",2, "2/3 es mas que 1/2, por lo que se puede \nestar seguro de que habra un terremoto.",3, "Hay mayor probabilidad que hay un terremoto a que no haya uno \nen la ciudad de Zed.",4, "No se puede saber lo que sucedera. porque nadie \nporque nadie puede estar seguro de que suceda un \nterremoto."])
+        comprobar(respuesta)
         time.sleep(1)
         pass
     elif eleccion == 2:
@@ -183,5 +175,11 @@ def combinatoria_probabilidad():
         time.sleep(1)
         pass
     elif eleccion == 3:
+        cantidad = random.randrange(100,700,5)
+        respuesta = cantidad*0.6
+        print("""La receta para preparar 100ml de aliño es""")
+        ut.tabla(["Ingredientes","Cantidad"],["Aceite para ensalada","60ml","Vinagre","30ml","Salsa de soja","10ml"])
+        print(f"""¿Cuantos mililitros de aceite para ensalda necesita para preparar {cantidad}ml de este aliño?""")
+        comprobar(respuesta)
 
-        pass
+    pass
