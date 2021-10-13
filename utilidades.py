@@ -23,9 +23,9 @@ def formato(texto,color="RESET",fondo="RESET",animacion=False):
     """
     init()
     if(animacion):
-        return mecanografiar((eval(f"Fore.{color}") if color != None else "")+(eval(f"Back.{fondo}") if color != None else "")+Style.BRIGHT +texto+Fore.RESET+Back.RESET+Style.RESET_ALL)
+        mecanografiar((eval(f"Fore.{color}") if color != None else "")+(eval(f"Back.{fondo}") if color != None else "")+texto+Fore.RESET+Back.RESET)
     else:
-        return (eval(f"Fore.{color}") if color != None else "")+(eval(f"Back.{fondo}") if color != None else "")+Style.BRIGHT +texto+Fore.RESET+Back.RESET+Style.RESET_ALL
+        print((eval(f"Fore.{color}") if color != None else "")+(eval(f"Back.{fondo}") if color != None else "")+texto+Fore.RESET+Back.RESET)
 
 def tabla(c,v):
     '''Uso de la funcion tabla

@@ -1,0 +1,3 @@
+Aritmetica,100
+Aritmetica,0
+Aritmetica,0

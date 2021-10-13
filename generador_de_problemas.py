@@ -6,8 +6,10 @@ import utilidades as ut
 def comprobar(respuesta):
     if(respuesta != int(input("Introduce tu respuesta --> "))):
         ut.mecanografiar(f"Respuesta incorrecta, la respuesta correcta es {respuesta}")
+        return 0
     else:
         ut.mecanografiar(f"Felicidades tu respuesta es correcta")
+        return 100
 
 
 def aritmetica():
@@ -18,7 +20,7 @@ def aritmetica():
         respuesta = largo*ancho
         print(f"""Para un concierto de rock se reservo un area de {largo}m de largo y {ancho}m de ancho.
                   Determina cual es la cantidad de personas que caben en el terreno si cada persona ocupa un metro de espacio""")
-        comprobar(respuesta)
+        return comprobar(respuesta)
         time.sleep(1)
         pass
     elif eleccion == 2:
@@ -38,7 +40,7 @@ def aritmetica():
         print(f"""El carpintero tiene en el almacén {tablas_largas} tablas largas de madera, {tablas_cortas} tablas cortas de 
                   madera, {ganchos_pequeños} ganchos pequeños, {ganchos_grandes} ganchos grandes y {tornillos} tornillos. """)
         print("Determina cuantas estanterias completas puede realizar el carpintero")
-        comprobar(respuesta)
+        return comprobar(respuesta)
         time.sleep(1)
         pass
     elif eleccion == 3:
@@ -47,7 +49,7 @@ def aritmetica():
         print("""La receta para preparar 100ml de aliño es""")
         ut.tabla(["Ingredientes","Cantidad"],["Aceite para ensalada","60ml","Vinagre","30ml","Salsa de soja","10ml"])
         print(f"""¿Cuantos mililitros de aceite para ensalda necesita para preparar {cantidad}ml de este aliño?""")
-        comprobar(respuesta)
+        return comprobar(respuesta)
         pass
 
 def algebra():
@@ -59,7 +61,7 @@ def algebra():
         respuesta = math.floor(resp)
         print("Para preparar 100 ml de anil para una ensalada, se necesitan 60 ml de aceite para ensalada, 30 ml de vinagre y 10 ml de salsa de soja.")
         print(f"¿Cuántos mililitros (ml) de aceite para ensalada necesitas para preparar {mililitros_anil} ml de aliño? (redondea tu respuesta a enteros)")
-        comprobar(respuesta)
+        return comprobar(respuesta)
         pass
 
     elif eleccion == 2:
@@ -70,7 +72,7 @@ def algebra():
         print("""En Alemania, una empresa de periódicos quiere contratar vendedores. En sus anuncios, muestran como se le pagará a sus vendedores, lo que dicen los anuncios es lo siguiente: 
                 “Pagamos: 0,20 Euros por periódico para los primeros 240 ejemplares que vendas en una semana, más 0,40 Euros por cada periódico adicional vendido.”""")
         print(f"Si Juanito vendió {num_periodicos} ejemplares la semana pasada, ¿Cuánto dinero le tienen que pagar a Juanito? (redondea tu respuesta a 2 decimales)")
-        comprobar(respuesta)
+        return comprobar(respuesta)
         pass
 
     elif eleccion == 3:
@@ -83,7 +85,7 @@ def algebra():
                   En el caso de los hombres, la fórmula n/p = {constante}, da una relación aproximada entre 
                   n (número de pasos por minuto) y P (longitud de los pasos en metros).""")
         print(f"Si Pedro da {pasos_min} pasos por minuto ¿Cuál es la longitud de sus pasos? Aplique la fórmula y redondee a 2 decimales.")
-        comprobar(respuesta)
+        return comprobar(respuesta)
         pass
 
 def geometria():
@@ -96,7 +98,7 @@ def geometria():
         respuesta = round(area_rebanada,2)
         print(f"Una pizzería vende pizzas con un diámetro de {diametro} cm y cada pizza tiene 8 rebanadas.")
         print("¿Cuántos centímetros cuadrados tiene cada rebanada de pizza? (Redondea tu respuesta a 2 decimales)")
-        comprobar(respuesta)
+        return comprobar(respuesta)
         pass
 
     elif eleccion == 2:
@@ -106,7 +108,7 @@ def geometria():
         respuesta = altura_centro
         print(f"Una noria tiene un diámetro exterior de {diametro} metros y el su punto más alto se encuentra a {altura} metros del suelo")
         print("¿A qué altura se encuentra el centro de la noria con respecto al suelo?")
-        comprobar(respuesta)
+        return comprobar(respuesta)
         pass
 
     elif eleccion == 3:
@@ -119,7 +121,7 @@ def geometria():
         print(f"""Si la puerta da 4 vueltas por minuto y en cada sector hay espacio para 2 personas, 
                   ¿Cuál es el número máximo de personas que pueden entrar en el edificio por la puerta
                   en {min} minutos?""")
-        comprobar(respuesta)
+        return comprobar(respuesta)
         pass
 
 def funciones_y_graficas():
@@ -140,7 +142,7 @@ def estadistica_descriptiva():
         print(f"""En el colegio de Mariana, los exámenes se puntúan del 0 al 100 y todos tienen el mismo peso en la calificación final. 
                   Si en sus primeros 4 exámenes la media de calificación de Mariana es de 60 puntos y en su 5 examen obtiene un {examen_5}.""")
         print("¿Cuál será la media de calificaciones de Mariana después de los 5 exámenes? (Redondea a 2 decimales)")
-        comprobar(respuesta)
+        return comprobar(respuesta)
         pass
 
     elif eleccion == 2:
@@ -151,7 +153,7 @@ def estadistica_descriptiva():
                   su estatura media pero ese día faltó una chica a la clase. La estatura media de las 24 chicas es de 130 cm. 
                   Al siguiente dia miden a la chica que faltó y su estatura es de {estatura_nueva} cm. """)
         print("¿Cuál es la estatura media de la clase? (Redondea a 2 decimales")
-        comprobar(respuesta)
+        return comprobar(respuesta)
         pass
 
 def combinatoria_probabilidad():
@@ -164,7 +166,7 @@ def combinatoria_probabilidad():
                   El documental incluía un debate sobre la posibilidad de predecir los terremotos.
                   Un geólogo afirmó: En los próximos {years} años, hay dos posibilidades por cada 3
                   de que ocurra un terremoto en la ciudad de Zed. """)
-        #comprobar(respuesta)
+        #return comprobar(respuesta)
         time.sleep(1)
         pass
     elif eleccion == 2:
@@ -184,7 +186,7 @@ def combinatoria_probabilidad():
         print(f"""El carpintero tiene en el almacén {tablas_largas} tablas largas de madera, {tablas_cortas} tablas cortas de 
                   madera, {ganchos_pequeños} ganchos pequeños, {ganchos_grandes} ganchos grandes y {tornillos} tornillos. """)
         print("Determina cuantas estanterias completas puede realizar el carpintero")
-        comprobar(respuesta)
+        return comprobar(respuesta)
         time.sleep(1)
         pass
     elif eleccion == 3:
@@ -193,6 +195,6 @@ def combinatoria_probabilidad():
         print("""La receta para preparar 100ml de aliño es""")
         ut.tabla(["Ingredientes","Cantidad"],["Aceite para ensalada","60ml","Vinagre","30ml","Salsa de soja","10ml"])
         print(f"""¿Cuantos mililitros de aceite para ensalda necesita para preparar {cantidad}ml de este aliño?""")
-        comprobar(respuesta)
+        return comprobar(respuesta)
 
     pass

@@ -21,18 +21,19 @@ def main():
         eleccion = input("¿Deseas ver de nuevo la explicación?S/N")
         if(eleccion.upper()=="S"):
             ex.aritmetica()
+            system("pause")
             continuar = None
             while(continuar != "N"):
                 ut.mecanografiar("A continuacion un problema")
                 time.sleep(2)
-                gp.aritmetica()
+                ut.registrar_calificacion("Aritmetica",gp.aritmetica())
                 continuar = input("¿Quieres otro problema?S/N").upper()
         else:
             continuar = None
             while(continuar != "N"):
                 ut.mecanografiar("A continuacion un problema")
                 time.sleep(2)
-                gp.aritmetica()
+                ut.registrar_calificacion("Aritmetica",gp.aritmetica())
                 continuar = input("¿Quieres otro problema?S/N").upper()
         pass
     elif(eleccion == 2):
@@ -41,6 +42,7 @@ def main():
         eleccion = input("¿Deseas ver de nuevo la explicación?S/N")
         if(eleccion.upper()=="S"):
             ex.algebra()
+            system("pause")
             continuar = None
             while(continuar != "N"):
                 ut.mecanografiar("A continuacion un problema")
@@ -61,6 +63,7 @@ def main():
         eleccion = input("¿Deseas ver de nuevo la explicación?S/N")
         if(eleccion.upper()=="S"):
             ex.geometria()
+            system("pause")
             continuar = None
             while(continuar != "N"):
                 ut.mecanografiar("A continuacion un problema")
@@ -81,6 +84,7 @@ def main():
         eleccion = input("¿Deseas ver de nuevo la explicación?S/N")
         if(eleccion.upper()=="S"):
             ex.funciones_y_graficas()
+            system("pause")
             continuar = None
             while(continuar != "N"):
                 ut.mecanografiar("A continuacion un problema")
@@ -101,6 +105,7 @@ def main():
         eleccion = input("¿Deseas ver de nuevo la explicación?S/N")
         if(eleccion.upper()=="S"):
             ex.estadistica_descriptiva()
+            system("pause")
             continuar = None
             while(continuar != "N"):
                 ut.mecanografiar("A continuacion un problema")
@@ -121,6 +126,7 @@ def main():
         eleccion = input("¿Deseas ver de nuevo la explicación?S/N")
         if(eleccion.upper()=="S"):
             ex.combinatoria_probabilidad()
+            system("pause")
             continuar = None
             while(continuar != "N"):
                 ut.mecanografiar("A continuacion un problema")
