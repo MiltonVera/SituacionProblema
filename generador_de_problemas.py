@@ -75,7 +75,8 @@ def algebra():
 
     elif eleccion == 3:
         pasos_min = random.randrange(70,100,10)
-        resp = pasos_min / 140
+        constante = random.randrange(100,150,10)
+        resp = pasos_min / constante
         respuesta  = round(resp,2)
         print(f"""Pedro caminó por un camino enlodado y fue dejando huellas por todo el camino, la longitud del paso 
                   es la  es la distancia entre los extremos posteriores de dos huellas consecutivas. 
