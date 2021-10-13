@@ -53,14 +53,12 @@ def aritmetica():
 def algebra():
     eleccion = random.choice([1,2,3])
     if eleccion == 1:
-        Dinero_gastado = random.randrange(60,150,10)
-        cuota_anual = random.randrange(20,50,10)
-        resp = (Dinero_gastado - cuota_anual)
-        respuesta = resp/5
-        print(f"""En la ciudad de México, hay una tienda que aquila DVD. En dicha tienda, la cuota de socio anual es de {cuota_anual} pesos.
-        El precio de alquiler de los DVD para los socios es inferior al precio para los no socios, el precio por DVD para un socio es de 5 pesos y para los no socios es de 10 pesos""")
-        print(f"""Pedrito fue a la tienda y gastó un total de {Dinero_gastado}, incluyendo la cuota de socio""")
-        print("""¿Cuántos DVD compro pedrito?""")
+        mililitros_anil = random.randrange(110,250,10)
+        mililitros = mililitros_anil/100
+        resp = mililitros*60
+        respuesta = math.floor(resp)
+        print("Para preparar 100 ml de anil para una ensalada, se necesitan 60 ml de aceite para ensalada, 30 ml de vinagre y 10 ml de salsa de soja.")
+        print(f"¿Cuántos mililitros (ml) de aceite para ensalada necesitas para preparar {mililitros_anil} ml de aliño? (redondea tu respuesta a enteros)")
         comprobar(respuesta)
         pass
 
@@ -77,8 +75,7 @@ def algebra():
 
     elif eleccion == 3:
         pasos_min = random.randrange(70,100,10)
-        constante = random.randrange(100,150,10)
-        resp = pasos_min / constante
+        resp = pasos_min / 140
         respuesta  = round(resp,2)
         print(f"""Pedro caminó por un camino enlodado y fue dejando huellas por todo el camino, la longitud del paso 
                   es la  es la distancia entre los extremos posteriores de dos huellas consecutivas. 
@@ -156,10 +153,9 @@ def estadistica_descriptiva():
         comprobar(respuesta)
         pass
 
-
-
 def combinatoria_probabilidad():
-    eleccion = random.choice([1,2,3])
+    #eleccion = random.choice([1,2,3])
+    eleccion = 1
     if eleccion == 1:
         years = random.randrange(5,30,1)
         #respuesta = largo*ancho
@@ -191,5 +187,11 @@ def combinatoria_probabilidad():
         time.sleep(1)
         pass
     elif eleccion == 3:
+        cantidad = random.randrange(100,700,5)
+        respuesta = cantidad*0.6
+        print("""La receta para preparar 100ml de aliño es""")
+        ut.tabla(["Ingredientes","Cantidad"],["Aceite para ensalada","60ml","Vinagre","30ml","Salsa de soja","10ml"])
+        print(f"""¿Cuantos mililitros de aceite para ensalda necesita para preparar {cantidad}ml de este aliño?""")
+        comprobar(respuesta)
 
-        pass
+    pass
