@@ -1,6 +1,7 @@
 from colorama import*
 from time import sleep
 from tabulate import tabulate
+import matplotlib.pyplot as plt
 def formato(texto,color="RESET",fondo="RESET",animacion=False):
     """Colores disponibles de usar
     BLACK
@@ -59,6 +60,34 @@ def mecanografiar(texto):
         sleep(0.15)
         print(palabras, end=' ', flush=True)
     print()
+
+def graficar(x=[0],y=[0],tipo="scatter"):
+    '''
+    El argumento tipo define que grafica se va a usar,
+    los diferentes tipos de graficas que se pueden usar son
+        -scatter(dispersion de puntos)
+        -plot(diagrama de lineas)
+        -fill_between(Diagrama de areas)
+        -bar(diagrama de barras verticales)
+        -barh(diagrama de barras horizontales)
+        -pie(grafica de pastel)
+
+        Ejemplo de uso:
+        graficar([1,2,3],[1,2,3],"plot") nos dibuja una grafica de lineas
+        graficar([1,4,5],tipo="pie") nos dibuja una grafica de pastel
+    
+    '''
+    #Creamos la figura
+    fig,ax = plt.subplots()
+    #Dibujamos los puntos dependiendo del tipo de figura
+    if(tipo == "pie"):
+        ax.pie(x)
+    else:
+        eval(f"ax.{tipo}(x,y)")
+    #Mostramos la grafica
+    plt.show()
+
+
 
 
 

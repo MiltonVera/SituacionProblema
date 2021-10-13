@@ -25,7 +25,7 @@ kk = input()
 #time.sleep(2)
 system("cls")
 while True:
-    print(ut.tabla(["OPCION","NUMERO"],["Estudio General",1,"Estudio especifico",2,"Examen Final",3,"salir del programa",4]))
+    print(ut.tabla(["OPCION","NUMERO"],["Estudio General",1,"Estudio especifico",2,"Examen Final",3,"salir del programa",4,"Pruebas",5]))
     opcion = input()
     if(opcion == "1" or opcion == "Estudio general"):
         eg.main()
@@ -40,6 +40,8 @@ while True:
     elif(opcion == "4" or opcion == "Salir del programa"):
         print("Hasta la proxima")
         exit()
+
+
         
 
 
