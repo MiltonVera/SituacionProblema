@@ -37,12 +37,42 @@ def geometria():
     ut.formato("Geometría","RED",animacion=True)
     time.sleep(1)
     ut.formato("""La geometría elemental se divide en dos partes, geometría plana (estudia la figuras planas, que tienen únicamente dos dimensiones: largo y ancho)
-                  y geometría del espacio (estudia las propiedades de los cuerpos geométricos provistos de largo, ancho y altura o profundidad). \nAlgunos de los conceptos básicos de la geometría son los siguientes: \n-Punto: el objeto fundamental de la geometría, representa una sola posición y no tiene dimensiones \n-Recta: únicamente cuenta con longitud, es un conjunto infinito de puntos que se extienden en una dimensión en ambas direcciones \n-Semirrecta: una porción de una recta que cuenta con principio pero no con un fin \n-Segmento de recta: porción de una recta con principio y fin \n-Plano: una superficie en dos dimensiones, cuenta con ancho y largo \n-Polígonos: figuras planas cerradas que está formada por tres o más segmentos de recta que se unen en sus puntos extremos. Los polígonos reciben sus nombres por su cantidad de lados, los más comunes son el triángulo (3 lados), cuadrilátero (4 lados), pentágono (5 lados), entre otros \n-Vértices: puntos finales de un segmento \n-Lados: segmentos de recta que unen dos vértices consecutivos de un polígono \n-Diagonal: segmento de recta que une dos vértices no consecutivos \n-Círculos: figura plana que consiste en todos los puntos que están sobre una curva cerrada y de los puntos interiores de ella, en la cual cada punto sobre la curva tiene la misma distancia al centro del círculo \n-Radio de un círculo: la distancia entre el centro y un punto de la curva de un círculo \n-Diámetro: distancia entre dos puntos de la curva que pasa por el centro del círculo \n-La Circunferencia es la línea curva cerrada y plana cuyos puntos están a la misma distancia (radio) de un punto (centro)""","BLACK","WHITE")
+                  y geometría del espacio (estudia las propiedades de los cuerpos geométricos provistos de largo, ancho y altura o profundidad).
+                  Algunos de los conceptos básicos de la geometría son los siguientes:
+                    -Punto: el objeto fundamental de la geometría, representa una sola posición y no tiene dimensiones
+                    -Recta: únicamente cuenta con longitud, es un conjunto infinito de puntos que se extienden en una dimensión en ambas direcciones
+                    -Semirrecta: una porción de una recta que cuenta con principio pero no con un fin
+                    -Segmento de recta: porción de una recta con principio y fin
+                    -Plano: una superficie en dos dimensiones, cuenta con ancho y largo
+                    -Polígonos: figuras planas cerradas que está formada por tres o más segmentos 
+                        de recta que se unen en sus puntos extremos. Los polígonos reciben sus 
+                        nombres por su cantidad de lados, los más comunes son el triángulo (3 lados)
+                        , cuadrilátero (4 lados), pentágono (5 lados), entre otros
+                    -Vértices: puntos finales de un segmento
+                    -Lados: segmentos de recta que unen dos vértices consecutivos de un polígono 
+                    -Diagonal: segmento de recta que une dos vértices no consecutivos
+                    -Círculos: figura plana que consiste en todos los puntos que están 
+                     sobre una curva cerrada y de los puntos interiores de ella, en la
+                     cual cada punto sobre la curva tiene la misma distancia al centro del círculo
+                    -Radio de un círculo: la distancia entre el centro y un punto de la curva de un círculo
+                    -Diámetro: distancia entre dos puntos de la curva que pasa por el centro del círculo
+                    -La Circunferencia es la línea curva cerrada y plana cuyos puntos están a la misma
+                      distancia (radio) de un punto (centro)""","BLACK","WHITE")
     pass
 def funciones_y_graficas():
     ut.formato("Funciones y gráficas","RED",animacion=True)
     time.sleep(1)
-    ut.formato("Una función es una relación entre un conjunto de salida llamado dominio y un conjunto de llegada llamado codominio, tal relación debe cumplir que cada elemento del dominio se debe relacionar una vez con algún elemento del codominio. \nLa forma de relacionar los elementos en una función está dada por una regla llamada criterio de la función. \nUn gráfico es el conjunto de pares ordenados en una expresión de x, y. Se representan en un plano cartesiano, el cual es intersección perpendicular de un eje x con un eje y (cada eje tiene una métrica) \nElementos de un análisis de gráficas: \n-Dominio: los números del eje x que abarca una gráfica. \n-Rango: Los números del eje y que abarca una gráfica. \n-Intervalos de monotonía: intervalos del eje x donde la función es estrictamente decreciente, constante o estrictamente creciente.","BLACK","WHITE")
+    ut.formato("""Una función es una relación entre un conjunto de salida llamado dominio y un conjunto de llegada llamado codominio,
+                  tal relación debe cumplir que cada elemento del dominio se debe relacionar una vez con algún elemento del codominio.
+                  La forma de relacionar los elementos en una función está dada por una regla llamada criterio de la función.
+                  Un gráfico es el conjunto de pares ordenados en una expresión de x, y. Se representan en un plano cartesiano,
+                  el cual es intersección perpendicular de un eje x con un eje y (cada eje tiene una métrica)
+                  Elementos de un análisis de gráficas: 
+                    -Dominio: los números del eje x que abarca una gráfica.
+                    -Rango: Los números del eje y que abarca una gráfica.
+                    -Intervalos de monotonía: intervalos del eje x donde la
+                        función es estrictamente decreciente, constante o
+                        estrictamente creciente.""","BLACK","WHITE")
     pass
 def estadistica_descriptiva():
     ut.formato("Estadística Descriptiva","RED",animacion=True)
