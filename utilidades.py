@@ -87,6 +87,55 @@ def graficar(x=[0],y=[0],tipo="scatter"):
     #Mostramos la grafica
     plt.show()
 
+def registrar_calificacion(tema,calificacion):
+    with open("calificaciones.txt",'a') as archivo:
+        archivo.write(f"{tema},{calificacion}\n")
+
+def leer_calificaciones():
+    with open("calificaciones.txt","r") as archivo:
+        elementos = 0
+        materias = []
+        calificaciones = []
+        calif_mat = {}
+        for c in archivo:
+            elementos+=1
+            c = c.rstrip('\n')
+            elemento = c.split(',')
+            materias.append(elemento[0])
+            calificaciones.append(elemento[1])
+        calif_mat = {v:[] for v in materias}
+        for i,v in enumerate(calificaciones):
+            calif_mat[materias[i]].append(v)
+        
+        calif_mat = {i:promedio(calif_mat[i]) for i in calif_mat}
+        return calif_mat 
+
+def promedio(lista):
+    s = 0
+    c = 0
+    for i in lista:
+        s+=int(i)
+        c+=1
+    return s/c 
+
+def dict_a_list(dict):
+    llaves = list(dict.keys())
+    valores = list(dict.values())
+    lista = []
+    for i,v in enumerate(llaves):
+        lista.append(v)
+        lista.append(valores[i])
+    return lista
+
+
+            
+        
+        
+            
+
+
+
+
 
 
 

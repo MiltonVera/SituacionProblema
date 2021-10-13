@@ -7,6 +7,7 @@ import estudio_general as eg
 import estudio_especifico as ee
 import generador_de_problemas as gp
 import examen_final as ex
-import pruebas as pb
 
-ut.graficar([1,2,3],tipo="pie")
+
+print(ut.dict_a_list(ut.leer_calificaciones()))
+

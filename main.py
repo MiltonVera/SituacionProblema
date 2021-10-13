@@ -20,12 +20,12 @@ print("Al final de cada tema tendras la oportunidad de practicarlo y ver si lo p
 #time.sleep(2)
 print("Cuando te sientas listo/a para realizar el examen PISA te realizaremos un examen final para que puedas comprobar que ya estas preparado para el examen")
 #time.sleep(2)
-ut.mecanografiar("Presiona enter para empezar")
-kk = input()
+system("pause")
 #time.sleep(2)
 system("cls")
 while True:
-    print(ut.tabla(["OPCION","NUMERO"],["Estudio General",1,"Estudio especifico",2,"Examen Final",3,"salir del programa",4,"Pruebas",5]))
+    system("cls")
+    print(ut.tabla(["OPCION","NUMERO"],["Estudio General",1,"Estudio especifico",2,"Examen Final",3,"Ver registro",4,"Salir del programa",5]))
     opcion = input()
     if(opcion == "1" or opcion == "Estudio general"):
         eg.main()
@@ -35,9 +35,13 @@ while True:
         pass
     elif(opcion == "3" or opcion == "Examen final"):
         ex.main()
-
         pass
-    elif(opcion == "4" or opcion == "Salir del programa"):
+    elif opcion == "4" or opcion == "Ver Calificaciones":
+        ut.mecanografiar("A continuacion se mostraran tus calificaciones")
+        ut.tabla(["Materia","Calificacion"],ut.dict_a_list(ut.leer_calificaciones()))
+        system("pause")
+        pass
+    elif(opcion == "5" or opcion == "Salir del programa"):
         print("Hasta la proxima")
         exit()
 
