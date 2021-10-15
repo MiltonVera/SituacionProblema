@@ -1,3 +1,7 @@
 Aritmetica,100
-Aritmetica,0
-Aritmetica,0
+Algebra,100
+Aritmetica,100
+Aritmetica,100
+Algebra,100
+Geometria,100
+Funciones y Graficas,100

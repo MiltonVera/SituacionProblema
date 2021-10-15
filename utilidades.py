@@ -110,6 +110,11 @@ def leer_calificaciones():
         calif_mat = {i:promedio(calif_mat[i]) for i in calif_mat}
         return calif_mat 
 
+def borrar_registro():
+    archivo =  open("calificaciones.txt",'w')
+    archivo.close()
+        
+
 def promedio(lista):
     s = 0
     c = 0

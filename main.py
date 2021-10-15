@@ -25,7 +25,7 @@ system("pause")
 system("cls")
 while True:
     system("cls")
-    print(ut.tabla(["OPCION","NUMERO"],["Estudio General",1,"Estudio especifico",2,"Examen Final",3,"Ver registro",4,"Salir del programa",5]))
+    print(ut.tabla(["OPCION","NUMERO"],["Estudio General",1,"Estudio especifico",2,"Examen Final",3,"Ver registro",4,"Borrar Registro",5,"Salir del programa",6]))
     opcion = input()
     if(opcion == "1" or opcion == "Estudio general"):
         eg.main()
@@ -41,7 +41,11 @@ while True:
         ut.tabla(["Materia","Calificacion"],ut.dict_a_list(ut.leer_calificaciones()))
         system("pause")
         pass
-    elif(opcion == "5" or opcion == "Salir del programa"):
+    elif opcion == "5" or opcion == "Borrar Registro":
+        ut.borrar_registro()
+        ut.mecanografiar("Registro borrado correctamente")
+        system("pause")
+    elif(opcion == "6" or opcion == "Salir del programa"):
         print("Hasta la proxima")
         exit()
 
