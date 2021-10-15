@@ -61,7 +61,7 @@ def mecanografiar(texto):
         print(palabras, end=' ', flush=True)
     print()
 
-def graficar(x=[0],y=[0],tipo="scatter"):
+def graficar(x=[0],y=[0],tipo="plot"):
     '''
     El argumento tipo define que grafica se va a usar,
     los diferentes tipos de graficas que se pueden usar son
