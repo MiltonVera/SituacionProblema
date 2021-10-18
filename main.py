@@ -8,6 +8,7 @@ import estudio_especifico as ee
 import generador_de_problemas as gp
 import examen_final as ex
 
+ut.importar()
 #im = Image.open("tec.jpg")
 #im.show()
 

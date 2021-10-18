@@ -2,6 +2,10 @@ from colorama import*
 from time import sleep
 from tabulate import tabulate
 import matplotlib.pyplot as plt
+import platform
+from os import system
+
+
 def formato(texto,color="RESET",fondo="RESET",animacion=False):
     """Colores disponibles de usar
     BLACK
@@ -131,6 +135,20 @@ def dict_a_list(dict):
         lista.append(v)
         lista.append(valores[i])
     return lista
+
+def importar():
+    sistema = platform.system()
+    if(sistema == "Windows"):
+        system("python -m pip install matplotlib")
+        system("python -m pip install tabulate")
+        system("python -m pip install colorama")
+        system("python -m pip install pillow")
+    else:
+        system("python3 -m pip install matplotlib")
+        system("python3 -m pip install tabulate")
+        system("python3 -m pip install colorama")
+        system("python3 -m pip install pillow")
+
 
 
             
