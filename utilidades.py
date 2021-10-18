@@ -2,6 +2,9 @@ from colorama import*
 from time import sleep
 from tabulate import tabulate
 import matplotlib.pyplot as plt
+import platform
+from os import system
+sistema = platform.system()
 
 
 
@@ -59,6 +62,7 @@ def tabla(c,v):
     return print(tabulate(tabla,headers="firstrow",tablefmt="fancy_grid"))
 
 def mecanografiar(texto):
+    #Produce una animacion de escritura 
     for palabras in texto.split():
         sleep(0.15)
         print(palabras, end=' ', flush=True)
@@ -91,16 +95,18 @@ def graficar(x=[0],y=[0],tipo="plot"):
     plt.show()
 
 def registrar_calificacion(tema,calificacion):
+    #Registra una calificacion en formato tema,calificacion
     with open("calificaciones.txt",'a') as archivo:
         archivo.write(f"{tema},{calificacion}\n")
 
 def leer_calificaciones():
+    #Lee las calificaciones del archivo y las procesa
     with open("calificaciones.txt","r") as archivo:
         elementos = 0
         materias = []
         calificaciones = []
         calif_mat = {}
-        for c in archivo:
+        for c in archivo:#Recorre el archivo y lo asigna a listas
             elementos+=1
             c = c.rstrip('\n')
             elemento = c.split(',')
@@ -114,11 +120,13 @@ def leer_calificaciones():
         return calif_mat 
 
 def borrar_registro():
+    #Abre el archivo en write para que se borre todo lo anterior
     archivo =  open("calificaciones.txt",'w')
     archivo.close()
         
 
 def promedio(lista):
+    #Calcula el promedio de una lista
     s = 0
     c = 0
     for i in lista:
@@ -127,6 +135,7 @@ def promedio(lista):
     return s/c 
 
 def dict_a_list(dict):
+    #Funcion que se creo para poder convertir un diccionario a una lista en el formato ["Llave","valor"]
     llaves = list(dict.keys())
     valores = list(dict.values())
     lista = []
@@ -136,7 +145,14 @@ def dict_a_list(dict):
     return lista
  
 def pausa():
-    temp = input("Presiona enter para continuar...")
+    temp = input("Presiona enter para continuar...")#Se define un input para que se establezca una pausa
+
+def clear():
+    if(sistema == "Windows"):#Detecta el sistema operativo y ejecuta el comando de clear correspondiente
+        system("cls")
+    else:
+        system("clear")
+
 
 
             

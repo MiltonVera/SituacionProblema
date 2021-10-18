@@ -1,5 +1,6 @@
 import utilidades as ut
-import time
+import time 
+#En esta parte del código colocamos las definiciones de los temas explicando 
 def aritmetica():
     ut.formato("Aritmética","RED",animacion=True)
     time.sleep(1)

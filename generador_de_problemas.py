@@ -9,13 +9,15 @@ def comprobar(respuesta):
     codigos = {833471:"Milton",1197876:"Jose",833485:"Patricio",1732785:"Francisco"}
     r_usuario = int(input("Introduce tu respuesta --> "))
     if(respuesta == r_usuario):
+        #Comprueba si la respuesta es correcta
         ut.mecanografiar(f"Felicidades tu respuesta es correcta")
         return 100
         
     elif(r_usuario in list(codigos.keys())):
+        #Busca por codigo de programador
         ut.formato(f"Programador {codigos[r_usuario]}","GREEN","BLACK",True)
         ut.formato(f"Respuesta correcta {respuesta}","GREEN","BLACK",True)
-        ut.formato(f"Calificacion registrada: 100","GREEN","BLACK",True)
+        ut.formato(f"Calificación registrada: 100","GREEN","BLACK",True)
         return 100
 
     else:
@@ -24,14 +26,14 @@ def comprobar(respuesta):
         
 
 
-def aritmetica():
-    eleccion = random.choice([1,2,3])
+def aritmetica(): #Generador de problemas de aritmetica
+    eleccion = random.choice([1,2,3]) #genera un número random para escoger un problema de las plantillas.
     if eleccion == 1:
         largo = random.randrange(50,100,1)
         ancho = random.randrange(20,70,1)
         respuesta = largo*ancho
-        print(f"""Para un concierto de rock se reservo un area de {largo}m de largo y {ancho}m de ancho.
-                  Determina cual es la cantidad de personas que caben en el terreno si cada persona ocupa un metro de espacio""")
+        print(f"""Para un concierto de rock se reservo un área de {largo}m de largo y {ancho}m de ancho.
+                  Determina cuál es la cantidad de personas que caben en el terreno si cada persona ocupa un metro de espacio""")
         return comprobar(respuesta)
         
     elif eleccion == 2:
@@ -42,7 +44,7 @@ def aritmetica():
         tornillos = random.randrange(350,700,5)
         cantidades = [tablas_largas/4,tablas_cortas/6,ganchos_pequeños/12,ganchos_grandes/2,tornillos/14]
         respuesta= math.floor(min(cantidades))
-        print("""Un carpintero necesita lo siguiente para hacer una estanteria
+        print("""Un carpintero necesita lo siguiente para hacer una estantería
                  4 tablas largas de madera
                  6 tablas cortas de madera
                  12 ganchos pequeños
@@ -50,7 +52,7 @@ def aritmetica():
                  14 tornillos""")
         print(f"""El carpintero tiene en el almacén {tablas_largas} tablas largas de madera, {tablas_cortas} tablas cortas de 
                   madera, {ganchos_pequeños} ganchos pequeños, {ganchos_grandes} ganchos grandes y {tornillos} tornillos. """)
-        print("Determina cuantas estanterias completas puede realizar el carpintero")
+        ut.mecanografiar("Determina cuántas estanterías completas puede realizar el carpintero (Redondea al entero de abajo)")
         return comprobar(respuesta)
         
     elif eleccion == 3:
@@ -58,7 +60,7 @@ def aritmetica():
         respuesta = cantidad*0.6
         print("""La receta para preparar 100ml de aliño es""")
         ut.tabla(["Ingredientes","Cantidad"],["Aceite para ensalada","60ml","Vinagre","30ml","Salsa de soja","10ml"])
-        print(f"""¿Cuantos mililitros de aceite para ensalda necesita para preparar {cantidad}ml de este aliño?""")
+        print(f"""¿Cuántos mililitros de aceite para ensalda necesita para preparar {cantidad}ml de este aliño?""")
         return comprobar(respuesta)
         
     elif eleccion == 4:
@@ -69,27 +71,26 @@ def aritmetica():
         c5 = random.randrange(40000,100000,100)
         respuesta = (c1+c2+c3+c4+c5)*.2
         print(f"Una empresa cobra el 20% sobre los ingresos mensulaes de 5 negocios, los ingresos de este mes de las franquicias son {c1},{c2},{c3},{c4}, y {c5}.")
-        print("¿Cuánto recibió la empresa en total este mes?")
+        ut.mecanografiar("¿Cuánto recibió la empresa en total este mes?")
         return comprobar(respuesta)
         
 
-def algebra():
-    eleccion = random.choice([1,2,3])
+def algebra(): #Generador de problemas de algebra
+    eleccion = random.choice([1,2,3]) #genera un número random para escoger un problema de las plantillas.
     if eleccion == 1:
         ml = random.randrange(50,200,1)
         respuesta = ml*.2
         print(f"Se tienen {ml} mililitros de un químico con una concentración de 30% de ácido.")
-        print("¿Cuántos mililitros se deben de añadir para subir su concentración de ácido al 50%?")
+        ut.mecanografiar("¿Cuántos mililitros se deben de añadir para subir su concentración de ácido al 50%?")
         return comprobar(respuesta)
         
     elif eleccion == 2:
         num_periodicos = random.randrange(250,500,5)
         periodicos_extra = num_periodicos - 240
-        resp = round(((240*0.2) + (periodicos_extra*0.4)),2)
-        respuesta = resp
+        respuesta = math.floor(((240*0.2) + (periodicos_extra*0.4)))
         print("""En Alemania, una empresa de periódicos quiere contratar vendedores. En sus anuncios, muestran como se le pagará a sus vendedores, lo que dicen los anuncios es lo siguiente: 
                 “Pagamos: 0,20 Euros por periódico para los primeros 240 ejemplares que vendas en una semana, más 0,40 Euros por cada periódico adicional vendido.”""")
-        print(f"Si Juanito vendió {num_periodicos} ejemplares la semana pasada, ¿Cuánto dinero le tienen que pagar a Juanito? (redondea tu respuesta a 2 decimales)")
+        print(f"Si Juanito vendió {num_periodicos} ejemplares la semana pasada, ¿Cuánto dinero le tienen que pagar a Juanito? (Redondea al entero de abajo)")
         return comprobar(respuesta)
         
 
@@ -97,26 +98,26 @@ def algebra():
         pasos_min = random.randrange(70,100,10)
         constante = random.randrange(100,150,10)
         resp = pasos_min / constante
-        respuesta  = round(resp,2)
+        respuesta  = math.floor(resp)
         print(f"""Pedro caminó por un camino enlodado y fue dejando huellas por todo el camino, la longitud del paso 
                   es la  es la distancia entre los extremos posteriores de dos huellas consecutivas. 
                   En el caso de los hombres, la fórmula n/p = {constante}, da una relación aproximada entre 
                   n (número de pasos por minuto) y P (longitud de los pasos en metros).""")
-        print(f"Si Pedro da {pasos_min} pasos por minuto ¿Cuál es la longitud de sus pasos? Aplique la fórmula y redondee a 2 decimales.")
+        print(f"Si Pedro da {pasos_min} pasos por minuto ¿Cuál es la longitud de sus pasos? Aplique la fórmula (Redondea al entero de abajo)")
         return comprobar(respuesta)
         
  
 
-def geometria():
-    eleccion = random.choice([1,2,3])
+def geometria(): #Generador de problemas de geometría
+    eleccion = random.choice([1,2,3]) #genera un número random para escoger un problema de las plantillas.
     if eleccion == 1:
         diametro = random.randrange(20,50,10)
         radio = diametro/2
         area_pizza = 3.1416*(radio**2)
         area_rebanada = area_pizza/8
-        respuesta = round(area_rebanada,2)
+        respuesta = math.floor(area_rebanada)
         print(f"Una pizzería vende pizzas con un diámetro de {diametro} cm y cada pizza tiene 8 rebanadas.")
-        print("¿Cuántos centímetros cuadrados tiene cada rebanada de pizza? (Redondea tu respuesta a 2 decimales)")
+        ut.mecanografiar("¿Cuántos centímetros cuadrados tiene cada rebanada de pizza? (Redondea al entero de abajo)")
         return comprobar(respuesta)
         
 
@@ -126,7 +127,7 @@ def geometria():
         altura_centro = (diametro/2) + (altura-diametro)
         respuesta = altura_centro
         print(f"Una noria tiene un diámetro exterior de {diametro} metros y el su punto más alto se encuentra a {altura} metros del suelo")
-        print("¿A qué altura se encuentra el centro de la noria con respecto al suelo?")
+        ut.mecanografiar("¿A qué altura se encuentra el centro de la noria con respecto al suelo?")
         return comprobar(respuesta)
         
 
@@ -147,20 +148,20 @@ def geometria():
         largo = random.randrange(60,100,5)
         respuesta = (ancho*3)+(largo*3)
         print(f"Se tiene un terreno de {ancho} metros de ancho por {largo} metros de largo, y se quiere poner una cerca alrededor, pero también se quiere dividir en 4 partes iguales desde el centro")
-        print("¿Cuántos metros de cerca se necesitan?")
+        ut.mecanografiar("¿Cuántos metros de cerca se necesitan?")
         return comprobar(respuesta)
         
 
-def funciones_y_graficas():
-    eleccion = random.choice([1,2,3])
+def funciones_y_graficas(): #Generador de problemas de funciones y gráficas 
+    eleccion = random.choice([1,2,3]) #genera un número random para escoger un problema de las plantillas.
     if eleccion == 1:
         robos1 = random.randrange(300,500,10)
         robos2 = random.randrange(600,800,10)
         respuesta = 1
         print("Un presentador de TV mostro el siguiente gráfico y dijo:") 
         ut.graficar(["Año 1988","Año 1999"],[robos1,robos2],tipo="bar")
-        ut.mecanografiar("El gráfico muestra que hay un enorme aumento del numero de robos comparando 1988 con 1999")
-        ut.mecanografiar("Si estas de acuerdo con el presentador introduce 1, si no introduce 2")
+        ut.mecanografiar("El gráfico muestra que hay un enorme aumento del número de robos comparando 1988 con 1999")
+        ut.mecanografiar("Si estás de acuerdo con el presentador introduce 1, si no introduce 2")
         return comprobar(respuesta)
         
     elif eleccion == 2:
@@ -168,18 +169,18 @@ def funciones_y_graficas():
         x = [x*multiplicador for x in range(10)]
         y = [i**2 for i in x]
         respuesta = 1
-        print("""Un coche acelera a velocidad a velocidad acelerada, 
-                 a continuacion se te mostrara una grafica y deberas
-                 indicar si la grafica va de acorde con el movimiento del
-                 vehiculo""")
+        ut.mecanografiar("""Un coche acelera a velocidad a velocidad acelerada, 
+                 a continuación se te mostrara una gráfica y deberás
+                 indicar si la gráfica va de acorde con el movimiento del
+                 vehículo""")
         ut.graficar(x,y)
-        print("Para de cir que si escribe 1 para decir que no escribe 0")
+        print("Para decir que sí, escribe 1, para decir que no, escribe 0")
         return comprobar(respuesta)
     elif eleccion == 3:
-        print("""A continuacion se te mostraran 4 graficas,
-                 despues de verla tienes que definir cual es
-                 la logaritmica""")
-        system("pause")
+        ut.mecanografiar("""A continuación se te mostrarán 4 gráficas,
+                 después de verla tienes que definir cuál es
+                 la logarítmica""")
+        ut.pausa()
         respuesta = 4
         fig, axs = plt.subplots(2,2)
         x = [x for x in range(1,10)]
@@ -191,41 +192,40 @@ def funciones_y_graficas():
         y.append([math.log(i,10) for i in x])
 
         axs[0,0].plot(x,y[0])
-        axs[0,0].set_title("Grafica 1")
+        axs[0,0].set_title("Gráfica 1")
         axs[0,1].plot(x,y[1])
-        axs[0,1].set_title("Grafica 2")
+        axs[0,1].set_title("Gráfica 2")
         axs[1,0].plot(x,y[2])
-        axs[1,0].set_title("Grafica 3")
+        axs[1,0].set_title("Gráfica 3")
         axs[1,1].plot(x,y[3])
-        axs[1,1].set_title("Grafica 4")
+        axs[1,1].set_title("Gráfica 4")
 
         plt.show()
 
-        print("Selecciona la opcion correspondiente a la grafica logaritmica")
-        ut.tabla(["Grafica","Opcion"],["Grafica 1",1,"Grafica 2",2,"Grafica 3",3,"Grafica 4",4])
+        ut.mecanografiar("Selecciona la opción correspondiente a la gráfica logarítmica")
+        ut.tabla(["Gráfica","Opción"],["Grafica 1",1,"Gráfica 2",2,"Gráfica 3",3,"Gráfica 4",4])
         return comprobar(respuesta)
         
 
-def estadistica_descriptiva():
-    eleccion = random.choice([1,2,3])
+def estadistica_descriptiva(): #Generador de problemas de estadística descriptiva
+    eleccion = random.choice([1,2,3]) #genera un número random para escoger un problema de las plantillas.
     if eleccion == 1:
         examen_5 = random.randrange(70,100,10)
         media = ((60*4)+examen_5)/5
-        respuesta = round(media,2)
+        respuesta = math.floor(media)
         print(f"""En el colegio de Mariana, los exámenes se puntúan del 0 al 100 y todos tienen el mismo peso en la calificación final. 
                   Si en sus primeros 4 exámenes la media de calificación de Mariana es de 60 puntos y en su 5 examen obtiene un {examen_5}.""")
-        print("¿Cuál será la media de calificaciones de Mariana después de los 5 exámenes? (Redondea a 2 decimales)")
+        ut.mecanografiar("¿Cuál será la media de calificaciones de Mariana después de los 5 exámenes? (Redondea al entero de abajo)")
         return comprobar(respuesta)
         
-
     elif eleccion == 2:
         estatura_nueva = random.randrange(110,150,10)
         media = ((130*24) + estatura_nueva) / 25
-        respuesta = round(media,2)
+        respuesta = math.floor(media)
         print(f"""En una clase hay 25 chicas. En su clase de educación física les piden calcular
                   su estatura media pero ese día faltó una chica a la clase. La estatura media de las 24 chicas es de 130 cm. 
-                  Al siguiente dia miden a la chica que faltó y su estatura es de {estatura_nueva} cm. """)
-        print("¿Cuál es la estatura media de la clase? (Redondea a 2 decimales")
+                  Al siguiente día miden a la chica que faltó y su estatura es de {estatura_nueva} cm. """)
+        ut.mecanografiar("¿Cuál es la estatura media de la clase? (Redondea al entero de abajo)")
         return comprobar(respuesta)
         
     elif eleccion == 3:
@@ -238,8 +238,8 @@ def estadistica_descriptiva():
         return comprobar(respuesta)
         
 
-def combinatoria_probabilidad():
-    eleccion = random.choice([1,2,3])
+def combinatoria_probabilidad(): #Generador de problemas de combinatoria y probabilidad
+    eleccion = random.choice([1,2,3]) #genera un número random para escoger un problema de las plantillas.
     if eleccion == 1:
         years = random.randrange(5,30,1)
         respuesta = math.floor((2/3)*years)
@@ -247,7 +247,7 @@ def combinatoria_probabilidad():
                   El documental incluía un debate sobre la posibilidad de predecir los terremotos.
                   Un geólogo afirmó: En los próximos {years} años, hay dos posibilidades por cada 
                   3 de que ocurra un terremoto en la ciudad de Zed. """)
-        print("¿En qué año a partir de ahora habrá un terremoto en la Ciudad de Zed?")
+        ut.mecanografiar("¿En qué año a partir de ahora habrá un terremoto en la Ciudad de Zed?(Redondea al entero de abajo)")
         return comprobar(respuesta)
         time.sleep(1)
 
@@ -256,16 +256,14 @@ def combinatoria_probabilidad():
         pantalones = random.randrange(1,5,1)
         respuesta = math.floor(((math.factorial(playeras))/math.factorial(playeras-1))*((math.factorial(pantalones))/math.factorial(pantalones-1)))
         print(f"En un armario hay {playeras} playeras y {pantalones} pantalones.") 
-        print("¿De cuántas formas nos podemos vestir?")
+        ut.mecanografiar("¿De cuántas formas nos podemos vestir?(Redondea al entero de abajo)")
         return comprobar(respuesta)
-            
-            
 
     elif eleccion == 3:
         panel = random.randrange(2,8,1)
         cifras = random.randrange(2,5,1)
         respuesta = panel**cifras
         print(f"Hay un panel con {panel} números, y la contraseña es de {cifras} cifras.")
-        print("¿Cuántas contraseñas distintas se pueden crear si los números se pueden repetir?")
+        ut.mecanografiar("¿Cuántas contraseñas distintas se pueden crear si los números se pueden repetir?")
         return comprobar(respuesta)
         
