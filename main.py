@@ -1,4 +1,17 @@
+import platform
 from os import system
+sistema = platform.system()
+if(sistema == "Windows"):
+    system("python -m pip install matplotlib")
+    system("python -m pip install tabulate")
+    system("python -m pip install colorama")
+    system("python -m pip install pillow")
+else:
+    system("python3 -m pip install matplotlib")
+    system("python3 -m pip install tabulate")
+    system("python3 -m pip install colorama")
+    system("python3 -m pip install pillow")
+
 import time
 from PIL import Image
 
@@ -8,7 +21,6 @@ import estudio_especifico as ee
 import generador_de_problemas as gp
 import examen_final as ex
 
-ut.importar()
 #im = Image.open("tec.jpg")
 #im.show()
 
